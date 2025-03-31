@@ -16,7 +16,8 @@
 
 /* Bouton du menu */
 .nav__control {
-    background-color: rgba(145, 0, 145, 0.2);
+    background-color: rgba(100, 100, 100, 0.2);
+    color: white;
     border: none;
     padding: 10px;
     min-width: 40px;
@@ -31,7 +32,7 @@
 .nav__control:hover,
 .nav__control:active {
     color: #fff;
-    background-color: darkmagenta;
+    background-color: rgba(200, 200, 200, 0.2);
 }
 
 .nav__control:focus {
