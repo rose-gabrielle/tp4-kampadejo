@@ -16,7 +16,7 @@
 
 /* Bouton du menu */
 .nav__control {
-    background-color: rgba(100, 100, 100, 0.2);
+    background-color: rgba(0, 0, 0, 0.2);
     color: white;
     border: none;
     padding: 10px;
@@ -32,7 +32,7 @@
 .nav__control:hover,
 .nav__control:active {
     color: #fff;
-    background-color: rgba(200, 200, 200, 0.2);
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .nav__control:focus {
@@ -48,7 +48,7 @@
      * de modifier l'apparence du outline par défaut des navigateurs.
      */
     outline-offset: -5px;
-    outline: darkmagenta auto 5px;
+    outline: #dba70d auto 5px;
 }
 
 
@@ -57,10 +57,18 @@
     content: "";
     width: 1em;
     height: 1em;
+    background-image: url(/assets/images/ico-fermer.svg);
+    margin-right: 8px;
     /* compléter pour afficher l’icône X */
 }
 
 .nav--closed .nav__control:before {
+    display: inline-block;
+    content:"";
+    width: 1em;
+    height: 1em;
+    background-image: url(/assets/images/ico-menu.svg);
+    margin-right: 8px;
     /* compléter pour afficher l’icône Hamburger */
 }
 
@@ -80,8 +88,8 @@
 
 /* Liens du menu */
 .nav__link {
-    background-color: rgba(145, 0, 145, 0.2);
-    display: block;
+    background-color: none;
+    display: flex;
     padding: 5px 10px;
     width: 100%;
 }
@@ -93,19 +101,27 @@
 }
 
 .nav__link:hover {
-    color: #fff;
-    background-color: darkmagenta;
+    color: #dba70d;
+    background-color: none;
 }
 
 .nav__link:active {
     color: #fff;
-    background-color: magenta;
+    background-color: #dba70d;
 }
 
 
 .nav__link:focus {
-    outline-offset: -5px;
-    outline: darkmagenta auto 5px;
+    outline: none;
+    border-left: 3px solid #dba70d;
+}
+
+@media (min-width:600px){
+    .nav__link:focus{
+        border-left: none;
+        border-bottom: 5px solid #dba70d;
+        width: 100%;
+    }
 }
 
 /** Une classe nav__link--active
@@ -113,13 +129,13 @@
     pour l'item de menu actif
     **/
 .nav__link--active {
-    border-left: 5px solid rgba(101, 68, 180, 1);
+    border-left: 5px solid #dba70d;
 }
 
 @media (min-width: 600px) {
     .nav__link--active {
         border-left: none;
-        border-bottom: 5px solid rgba(101, 68, 180, 1);
+        border-bottom: 5px solid #dba70d;
     }
 }
 

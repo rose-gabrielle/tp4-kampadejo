@@ -3,6 +3,11 @@
 
 /****** Variables (peuvent être utilisées dans tous les fichiers) *******/
 :root {
+    --color-text:#fff;
+    --color-y:#dba70d;
+    --color-g:rgba (255, 255, 255, 0.25);
+    --font-family: Raleway, sans-serif;
+    --border:3px solid #dba70d;
     /** Variables À DÉFINIR 
         JAUNE: #dba70d
         GRIS TRANSPARENT: rgba(255, 255, 255, 0.25)
